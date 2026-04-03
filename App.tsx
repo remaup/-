@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import FloatingButtons from './components/FloatingButtons';
 
 const Home = lazy(() => import('./pages/Home'));
 
@@ -14,6 +15,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
           </Routes>
         </Suspense>
+        <FloatingButtons />
       </div>
     </Router>
   );

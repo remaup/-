@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import RevealOnScroll from './RevealOnScroll';
 
 const Hero: React.FC = () => {
+  const [isIframeLoaded, setIsIframeLoaded] = useState(false);
+
+  useEffect(() => {
+    // Delay loading the heavy 3D iframe to prioritize main content rendering
+    const timer = setTimeout(() => {
+      setIsIframeLoaded(true);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
+
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -18,14 +28,17 @@ const Hero: React.FC = () => {
         
         {/* Spline 3D Background */}
         <div className="absolute inset-0 w-full h-full opacity-60">
-          <iframe 
-            src='https://my.spline.design/flowingribbon-WzE8CAQn2PDUGAOhXEv4vpcE/' 
-            frameBorder='0' 
-            width='100%' 
-            height='100%'
-            className="w-full h-full"
-            title="3D Flowing Ribbon"
-          ></iframe>
+          {isIframeLoaded && (
+            <iframe 
+              src='https://my.spline.design/flowingribbon-WzE8CAQn2PDUGAOhXEv4vpcE/' 
+              frameBorder='0' 
+              width='100%' 
+              height='100%'
+              className="w-full h-full"
+              title="3D Flowing Ribbon"
+              loading="lazy"
+            ></iframe>
+          )}
         </div>
 
         {/* Gradient Overlay for Text Readability */}
@@ -140,10 +153,10 @@ const Hero: React.FC = () => {
               <div className="w-12 h-12 rounded-full bg-slate-700/50 flex items-center justify-center mb-6">
                 <i className="fa-solid fa-handshake text-xl text-sky-400"></i>
               </div>
-              <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-300 mb-2">86%</h3>
+              <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-300 mb-2">92%</h3>
               <p className="text-lg font-bold text-white mb-4">압도적인 재계약률</p>
-              <p className="text-sm text-slate-400 leading-relaxed">
-                단순 노출이 아닌 실제 병원 매출 상승을 경험한 원장님들의 선택이 리마업의 실력을 증명합니다.
+              <p className="text-sm text-slate-400 leading-relaxed break-keep">
+                단순 노출이 아닌 실제 병원 매출 상승을 경험한 원장님들의 선택이<br />리마업의 실력을 증명합니다.
               </p>
             </div>
           </RevealOnScroll>
@@ -157,7 +170,9 @@ const Hero: React.FC = () => {
               <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400 mb-2">Zero</h3>
               <p className="text-lg font-bold text-white mb-4">의료법 위반 리스크</p>
               <p className="text-sm text-slate-400 leading-relaxed">
-                모든 콘텐츠는 보건소 소명 걱정 없이 의료법 가이드라인을 완벽히 준수하여 안전하게 작성됩니다.
+                모든 콘텐츠는 보건소 소명 걱정 없이 의료법<br />
+                가이드라인을 완벽히 준수하여<br />
+                안전하게 작성됩니다.
               </p>
             </div>
           </RevealOnScroll>

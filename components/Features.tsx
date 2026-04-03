@@ -158,7 +158,8 @@ const Features: React.FC = () => {
                   의료법 위반 0건, 원장님의 면허를 지킵니다
                 </h3>
                 <p className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
-                  병원 전문 마케터가 기획부터 원고 작성까지 전담합니다. 심의 기준을 철저히 준수하여 영업정지 등의 리스크를 원천 차단하고, 설득력 높은 카피라이팅으로 환자의 신뢰를 얻습니다.
+                  병원 전문 마케터가 기획부터 원고 작성까지 전담합니다. 심의 기준을 철저히 준수하여 영업정지 등의 리스크를 원천 차단하고<br />
+                  설득력 높은 카피라이팅으로 환자의 신뢰를 얻습니다.
                 </p>
               </div>
 
@@ -182,7 +183,11 @@ const Features: React.FC = () => {
                   단순 노출이 아닌 '실제 내원'을 만드는 기획
                 </h3>
                 <p className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
-                  상위노출만 되고 실제 환자는 오지 않는 공장식 원고가 아닙니다. 환자의 내적 문제를 저격하고 원장님의 진료 철학을 담아 실제 내원(전환율)으로 이어지는 기획을 제공합니다.
+                  원장님의 진료 철학을 담아<br />
+                  실제 환자의 내원(전환율)을 이끌어내는 기획<br />
+                  <br />
+                  단순 노출이 아닌, 병원 매출 상승에 직결되는<br />
+                  고효율 키워드 발굴 및 관리
                 </p>
               </div>
             </div>

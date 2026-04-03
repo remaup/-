@@ -1,9 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import RevealOnScroll from './RevealOnScroll';
-import { GoogleGenAI } from "@google/genai";
 
 const Portfolio: React.FC = () => {
-  // 1. Fallback Images: 즉시 로딩되는 기본 이미지 (AI 생성 전 표시)
+  // 1. Fallback Images: 즉시 로딩되는 기본 이미지
   const fallbackImages: { [key: string]: string } = {
     'ortho': 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop', 
     'plastic': 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop', 
@@ -13,7 +12,7 @@ const Portfolio: React.FC = () => {
     'psych': 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop'
   };
 
-  const [bgImages, setBgImages] = useState<{ [key: string]: string }>(fallbackImages);
+  const [bgImages] = useState<{ [key: string]: string }>(fallbackImages);
 
   // 성공 사례 데이터 (고객사의 권위 빌려오기 적용)
   const cases = [
@@ -141,74 +140,6 @@ const Portfolio: React.FC = () => {
   const handleTouchStart = (e: React.TouchEvent) => onDragStart(e.touches[0].pageX);
   const handleTouchEnd = onDragEnd;
   const handleTouchMove = (e: React.TouchEvent) => onDragMove(e.touches[0].pageX);
-
-  useEffect(() => {
-    const generateImages = async () => {
-      const apiKey = process.env.API_KEY;
-      if (!apiKey) {
-        console.log("API Key not found, using fallback images.");
-        return;
-      }
-
-      const ai = new GoogleGenAI({ apiKey });
-
-      const definitions = [
-        {
-          id: 'ortho',
-          prompt: 'Wide angle view of a modern Orthopedic clinic waiting room. Clean white and blue interior design, professional medical atmosphere, reception desk, bright lighting. No people. 8k resolution, photorealistic.'
-        },
-        {
-          id: 'plastic',
-          prompt: 'Wide angle view of a luxurious Plastic Surgery clinic lobby. Marble floors, elegant beige sofa, gold accents, high-end hotel style interior, soft warm lighting. No people. 8k resolution, photorealistic.'
-        },
-        {
-          id: 'derma',
-          prompt: 'Wide angle view of a Dermatology clinic treatment room. Advanced medical laser equipment, pristine white bed, clean and sterile environment, professional doctor office. No nature, no plants. 8k resolution, photorealistic.'
-        },
-        {
-          id: 'dental',
-          prompt: 'Wide angle view of a modern Dental clinic exam room. Dental chair, large window with city view, clean white and mint interior, medical equipment. 8k resolution, photorealistic.'
-        },
-        {
-          id: 'oriental',
-          prompt: 'Interior view of a clean Korean Oriental Medicine Clinic. Wall full of traditional wooden drawers (herbal medicine cabinets), warm wood tones, soft healing lighting, professional medical facility. No people. 8k resolution, photorealistic.'
-        },
-        {
-          id: 'psych',
-          prompt: 'Interior view of a private Psychiatry Clinic consultation room. Two comfortable beige armchairs facing each other for therapy, warm floor lamp, bookshelf, cozy atmosphere. No people, no cameras. 8k resolution, photorealistic.'
-        }
-      ];
-
-      definitions.forEach(async (def) => {
-        try {
-          const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash-image',
-            contents: { parts: [{ text: def.prompt }] },
-            config: {
-              imageConfig: {
-                aspectRatio: "16:9", 
-              }
-            }
-          });
-
-          const parts = response.candidates?.[0]?.content?.parts;
-          if (parts) {
-            for (const part of parts) {
-              if (part.inlineData && part.inlineData.data) {
-                 const base64Image = `data:image/png;base64,${part.inlineData.data}`;
-                 setBgImages(prev => ({ ...prev, [def.id]: base64Image }));
-                 break; 
-              }
-            }
-          }
-        } catch (e) {
-          console.warn(`Failed to generate image for ${def.id}, keeping fallback.`);
-        }
-      });
-    };
-
-    generateImages();
-  }, []);
 
   const getColorClasses = (color: string) => {
     const colors: {[key: string]: string} = {

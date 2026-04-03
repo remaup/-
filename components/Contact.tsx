@@ -2,9 +2,40 @@ import React from 'react';
 import RevealOnScroll from './RevealOnScroll';
 
 const Contact: React.FC = () => {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const [status, setStatus] = React.useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    alert('무료 진단 신청이 접수되었습니다. 담당자가 곧 연락드리겠습니다.');
+    setStatus('submitting');
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mkopqjyq', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        form.reset();
+        alert('무료 진단 신청이 성공적으로 접수되었습니다. 담당자가 곧 연락드리겠습니다.');
+      } else {
+        setStatus('error');
+        alert('신청 접수 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+      }
+    } catch (error) {
+      setStatus('error');
+      alert('네트워크 오류가 발생했습니다. 인터넷 연결을 확인해 주세요.');
+    } finally {
+      if (status !== 'success') {
+        setStatus('idle');
+      }
+    }
   };
 
   return (
@@ -30,6 +61,7 @@ const Contact: React.FC = () => {
                     <label htmlFor="hospital" className="block text-xs font-medium text-slate-400 mb-1 ml-1">병원명</label>
                     <input 
                       id="hospital"
+                      name="병원명"
                       type="text" 
                       required 
                       className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors backdrop-blur-sm placeholder-slate-500" 
@@ -40,10 +72,11 @@ const Contact: React.FC = () => {
                     <label htmlFor="position" className="block text-xs font-medium text-slate-400 mb-1 ml-1">직책</label>
                     <input 
                       id="position"
+                      name="직책"
                       type="text" 
                       required 
                       className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors backdrop-blur-sm placeholder-slate-500" 
-                      placeholder="예: 원장, 실장"
+                      placeholder="예: 원장, 마케팅 실장"
                     />
                   </div>
                 </div>
@@ -53,6 +86,7 @@ const Contact: React.FC = () => {
                     <label htmlFor="phone" className="block text-xs font-medium text-slate-400 mb-1 ml-1">연락처</label>
                     <input 
                       id="phone"
+                      name="연락처"
                       type="tel" 
                       required 
                       className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors backdrop-blur-sm placeholder-slate-500" 
@@ -64,15 +98,16 @@ const Contact: React.FC = () => {
                     <div className="relative">
                       <select 
                         id="plan"
+                        name="플랜선택"
                         required
                         className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors backdrop-blur-sm appearance-none cursor-pointer placeholder-slate-500"
                         defaultValue=""
                       >
                         <option value="" disabled className="bg-slate-800 text-slate-500">플랜 선택</option>
-                        <option value="basic" className="bg-slate-800 text-white">베이직 (월 8회)</option>
-                        <option value="standard" className="bg-slate-800 text-white">스탠다드 (월 12회)</option>
-                        <option value="premium" className="bg-slate-800 text-white">프리미엄 (월 16회)</option>
-                        <option value="undecided" className="bg-slate-800 text-white">미정 / 상담 후 결정</option>
+                        <option value="베이직 (월 8회)" className="bg-slate-800 text-white">베이직 (월 8회)</option>
+                        <option value="스탠다드 (월 12회)" className="bg-slate-800 text-white">스탠다드 (월 12회)</option>
+                        <option value="프리미엄 (월 16회)" className="bg-slate-800 text-white">프리미엄 (월 16회)</option>
+                        <option value="미정 / 상담 후 결정" className="bg-slate-800 text-white">미정 / 상담 후 결정</option>
                       </select>
                       <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-400">
                         <i className="fa-solid fa-chevron-down text-xs"></i>
@@ -82,15 +117,24 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="concern" className="block text-xs font-medium text-slate-400 mb-1 ml-1">고민사항 (선택)</label>
+                  <label htmlFor="concern" className="block text-xs font-medium text-slate-400 mb-1 ml-1">고민사항/연락 가능 시간 (선택)</label>
                   <textarea 
                     id="concern"
+                    name="고민사항 및 연락가능시간"
                     className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors h-24 backdrop-blur-sm placeholder-slate-500" 
-                    placeholder="예: 상위노출은 되는데 문의가 없어요"
+                    placeholder="예: 상위노출은 되는데 문의가 없어요 / 평일 오후 2시"
                   ></textarea>
                 </div>
-                <button type="submit" className="w-full relative px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 text-white font-bold shadow-[0_0_30px_rgba(37,99,235,0.4)] hover:shadow-[0_0_50px_rgba(99,102,241,0.6)] transform hover:-translate-y-1 mt-4">
-                  무료 진단 신청하기
+                <button 
+                  type="submit" 
+                  disabled={status === 'submitting'}
+                  className={`w-full relative px-8 py-4 rounded-full font-bold transition-all duration-500 transform mt-4 ${
+                    status === 'submitting' 
+                      ? 'bg-slate-600 text-slate-300 cursor-not-allowed' 
+                      : 'bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-600 bg-[length:200%_auto] hover:bg-right text-white shadow-[0_0_30px_rgba(37,99,235,0.4)] hover:shadow-[0_0_50px_rgba(99,102,241,0.6)] hover:-translate-y-1'
+                  }`}
+                >
+                  {status === 'submitting' ? '전송 중...' : '무료 진단 신청하기'}
                 </button>
               </form>
             </div>
