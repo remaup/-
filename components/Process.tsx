@@ -67,8 +67,22 @@ const Process: React.FC = () => {
             </h3>
             <ul className="text-slate-600 text-sm space-y-2 mb-6 inline-block text-left">
               <li className="flex items-center gap-2"><i className="fa-solid fa-check text-blue-500"></i> 소통 채널: 카카오톡 단체방 및 유선 전화 (상시 대기)</li>
-              <li className="flex items-center gap-2"><i className="fa-solid fa-check text-blue-500"></i> 작업 소요 시간: 결제 후 영업일 기준 3일 이내 초안 전달</li>
-              <li className="flex items-center gap-2"><i className="fa-solid fa-check text-blue-500"></i> 수정 횟수: 원장님 컨펌 완료 시까지 <strong>무제한 무상 수정</strong></li>
+              <li className="flex items-start gap-2">
+                <i className="fa-solid fa-check text-blue-500 mt-1"></i> 
+                <span>
+                  작업 소요 시간: 결제 후 영업일<br className="md:hidden" />
+                  기준 3일 이내 초안 전달
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <i className="fa-solid fa-check text-blue-500 mt-1"></i> 
+                <span>
+                  수정 횟수: 원장님<br className="md:hidden" />
+                  컨펌 완료 시까지<br className="md:hidden" />
+                  <strong>무제한 무상<br className="md:hidden" />
+                  수정</strong>
+                </span>
+              </li>
             </ul>
             
             <div>

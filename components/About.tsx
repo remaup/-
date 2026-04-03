@@ -7,9 +7,9 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <RevealOnScroll>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">
-              환자는 예쁜 디자인이 아니라 <br />
-              <span className="text-gradient">'내 고민을 해결해 줄 병원'을 찾습니다</span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900 leading-tight">
+              환자는 예쁜 디자인이 아니라<br />
+              <span className="text-gradient">'내 고민을 해결해 줄 병원을 찾습니다'</span>
             </h2>
           </RevealOnScroll>
           <RevealOnScroll delay={0.1}>

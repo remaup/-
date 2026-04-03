@@ -86,11 +86,14 @@ const Hero: React.FC = () => {
         <RevealOnScroll delay={0.3}>
           <div className="mb-10 inline-block text-left drop-shadow-md">
             <p className="text-xl md:text-2xl text-white font-bold leading-normal">
-              진료만으로도 벅찬 하루 복잡한 마케팅 고민은 리마업이 끝내드립니다
+              진료만으로도 벅찬 하루 복잡한 마케팅<br className="md:hidden" />
+              고민은 리마업이 끝내드립니다
             </p>
-            <p className="text-lg md:text-xl text-slate-400 font-medium leading-normal">
-              원장님의 시간은 환자에게 병원블로그는 확실한 전문가들에게<br />
-              진료 이외 모든 고민 리마업으로 완벽히 해결해드릴 수 있습니다
+            <p className="text-lg md:text-xl text-slate-400 font-medium leading-normal mt-2">
+              원장님의 시간은 환자에게 병원블로그는<br className="md:hidden" />
+              확실한 전문가들에게<br />
+              진료 이외 모든 고민 리마업으로<br className="md:hidden" />
+              완벽히 해결해드릴 수 있습니다
             </p>
           </div>
         </RevealOnScroll>
