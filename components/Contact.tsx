@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/10 blur-[80px] rounded-full pointer-events-none"></div>
 
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">우리 병원 블로그 방향성을 제시해드립니다</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">우리 병원 블로그 방향성을 제시해 드립니다.</h2>
               <p className="text-xl md:text-2xl text-slate-300 font-medium mb-10 max-w-2xl mx-auto leading-relaxed">
                 원장님 병원의 상황과 목표에 맞는<br />
                 최적의 플랜을 선택해 주세요.<br />
@@ -117,12 +117,12 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="concern" className="block text-xs font-medium text-slate-400 mb-1 ml-1">고민사항/연락 가능 시간 (선택)</label>
+                  <label htmlFor="concern" className="block text-xs font-medium text-slate-400 mb-1 ml-1">고민 사항/연락 가능 시간 (선택)</label>
                   <textarea 
                     id="concern"
                     name="고민사항 및 연락가능시간"
                     className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors h-24 backdrop-blur-sm placeholder-slate-500" 
-                    placeholder="예: 상위노출은 되는데 문의가 없어요 / 평일 오후 2시"
+                    placeholder="예: 상위 노출은 되는데 문의가 없어요 / 평일 오후 2시"
                   ></textarea>
                 </div>
                 <button 

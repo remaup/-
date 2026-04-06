@@ -33,6 +33,32 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
 const FAQ: React.FC = () => {
   const faqs = [
     {
+      question: "2026년인 지금, 유튜브·인스타 시대에 굳이 네이버 블로그를 해야 하나요?",
+      answer: (
+        <div className="space-y-4">
+          <p className="font-bold text-slate-800 text-base">
+            <span className="text-blue-600 block mb-1">신환 유입 1위 채널</span>
+            네, 블로그는 여전히 병원 마케팅의 본진입니다.
+          </p>
+
+          <div className="space-y-2">
+            <strong className="text-slate-800 block border-b border-slate-100 pb-1">왜 블로그인가</strong>
+            <ul className="space-y-2 text-sm text-slate-600 bg-white p-3 rounded-lg border border-slate-200 shadow-sm">
+              <li className="flex items-start gap-2"><i className="fa-solid fa-check text-blue-500 mt-1"></i> <span><strong>유튜브·인스타그램</strong>은 휘발성이 강하고 트렌드에 민감</span></li>
+              <li className="flex items-start gap-2"><i className="fa-solid fa-check text-blue-500 mt-1"></i> <span><strong>인스타그램</strong>은 의료법 위반 이슈에 매우 취약</span></li>
+              <li className="flex items-start gap-2"><i className="fa-solid fa-check text-blue-500 mt-1"></i> <span><strong>2026년 현재까지</strong> 가장 안정적으로 실제 내원, 신환을 만들어내는 채널은 단연 블로그</span></li>
+            </ul>
+          </div>
+
+          <div className="bg-blue-50 p-3 rounded-lg mt-3 border border-blue-100">
+            <p className="text-sm text-blue-800 font-medium leading-relaxed">
+              단, AI로 대충 쓴 글이나 프로그램 배포 방식은 이제 통하지 않습니다. 리마업처럼 AI 검색까지 대비한 고퀄리티 정성 포스팅만이 살아남습니다.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
       question: "효과를 보려면 최소 기간을 얼마나 잡아야 하나요?",
       answer: (
         <div className="space-y-4">
@@ -83,7 +109,7 @@ const FAQ: React.FC = () => {
           <p className="font-bold text-slate-800 text-base">상위노출은 입장권이고, 환자를 만드는 건 설득력입니다.</p>
           
           <div className="bg-white p-4 rounded border border-slate-200 shadow-sm space-y-2">
-            <strong className="text-blue-600 block">2026년 AI 웹검색(RAG) 시대</strong>
+            <strong className="text-blue-600 block">2026년 AI 웹 검색(RAG) 시대</strong>
             <p className="text-sm text-slate-600">기계적 노출보다 콘텐츠의 질과 신뢰성이 더 중요해졌습니다.</p>
           </div>
 
@@ -122,22 +148,22 @@ const FAQ: React.FC = () => {
       answer: "수정 횟수에 제한을 두지 않습니다. 원장님이 만족하실 때까지 수정해 드리며, 피드백은 업무 시간 내 즉시 반영을 원칙으로 합니다."
     },
     {
-      question: "어떤 병원 진료과목이든 가능한가요?",
-      answer: "네, 가능합니다. 피부과, 성형외과, 정형외과, 치과, 한의원 등 다양한 진료과목의 성공 사례를 보유하고 있으며 각 과목별 특성에 맞는 전문 작가가 배정됩니다."
+      question: "어떤 병원 진료 과목이든 가능한가요?",
+      answer: "네, 가능합니다. 피부과, 성형외과, 정형외과, 치과, 한의원 등 다양한 진료 과목의 성공 사례를 보유하고 있으며 각 과목별 특성에 맞는 전문 작가가 배정됩니다."
     },
     {
       question: "보고서는 어떻게 제공되나요?",
-      answer: "매월 말일, 키워드 노출 현황, 유입 통계, 블로그 지수 변화 등을 정리한 월간 리포트를 PDF 형태로 상세하게 전달드립니다."
+      answer: "매월 말일, 키워드 노출 현황, 유입 통계, 블로그 지수 변화 등을 정리한 월간 리포트를 PDF 형태로 상세하게 전달해 드립니다."
     }
   ];
 
   return (
-    <section id="faq" className="py-24 relative">
+    <section id="faq" className="py-24 relative bg-slate-50">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <RevealOnScroll>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">자주 묻는 <span className="text-gradient">질문</span></h2>
-            <p className="text-slate-500 text-lg">궁금하신 점을 미리 확인해보세요</p>
+            <p className="text-slate-500 text-lg">궁금하신 점을 미리 확인해 보세요.</p>
           </RevealOnScroll>
         </div>
 

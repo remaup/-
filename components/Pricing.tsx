@@ -9,7 +9,7 @@ const Pricing: React.FC = () => {
       price: "320,000",
       popular: false,
       features: [
-        "핵심키워드 추출/분석",
+        "핵심 키워드 추출/분석",
         "콘텐츠 기획",
         "클린 IP",
         "월말 성과 보고서",
@@ -22,7 +22,7 @@ const Pricing: React.FC = () => {
       price: "460,000",
       popular: true,
       features: [
-        "핵심키워드 추출/분석",
+        "핵심 키워드 추출/분석",
         "콘텐츠 기획",
         "전문 디자인 제작",
         "클린 IP",
@@ -37,7 +37,7 @@ const Pricing: React.FC = () => {
       price: "640,000",
       popular: false,
       features: [
-        "핵심키워드 추출/분석",
+        "핵심 키워드 추출/분석",
         "콘텐츠 기획",
         "전문 디자인 제작",
         "클린 IP",
@@ -63,10 +63,20 @@ const Pricing: React.FC = () => {
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-slate-900 tracking-tight">
               투명하고 합리적인 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">가격 정책</span>
             </h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto mb-8">
               거품을 뺀 비용으로 최고의 마케팅 효율을 경험하세요.<br className="hidden md:block" />
               모든 플랜에는 고품질 콘텐츠 기획과 전담 매니저 관리가 포함됩니다.
             </p>
+            
+            <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 bg-white border border-blue-100 shadow-lg shadow-blue-900/5 rounded-2xl px-6 py-4">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-50 text-blue-600">
+                <i className="fa-solid fa-shield-halved text-lg"></i>
+              </div>
+              <div className="text-center sm:text-left">
+                <p className="font-bold text-slate-900">불만족 시 100% 환불 보장</p>
+                <p className="text-sm text-slate-500">첫 달 진행 후 불만족 시 조건 없이 전액 환불해 드립니다.</p>
+              </div>
+            </div>
           </RevealOnScroll>
         </div>
 

@@ -21,7 +21,7 @@ const Portfolio: React.FC = () => {
       category: '마포구 매출 1위 *** 정형외과',
       tag: '지역 1위',
       title: '상세한 분석과 투명한 피드백',
-      desc: '현재 세달이상 계속 이어서 블로그관리 진행하고있어요 만족스러우니 연장하고있겠죠? 한달관리가 종료되면 ppt로 상세한 분석과 노출결과 등 다양한 피드백도 주셔서 좋은거같아요! 앞으로도 잘부탁드려요!',
+      desc: '현재 세 달 이상 계속 이어서 블로그 관리 진행하고 있어요. 만족스러우니 연장하고 있겠죠? 한 달 관리가 종료되면 PPT로 상세한 분석과 노출 결과 등 다양한 피드백도 주셔서 좋은 것 같아요! 앞으로도 잘 부탁드려요!',
       color: 'blue'
     },
     {
@@ -29,7 +29,7 @@ const Portfolio: React.FC = () => {
       category: '압구정 재방문율 1위 ***** 성형외과',
       tag: '매출 상승',
       title: '시술에 대한 완벽한 이해도',
-      desc: '꼼꼼하게 관리해주세요. 병원에서 하는 시술에 대해서 이해도 하지 못한채 짜집기하듯 글쓰는 업체들도 많은데 써주신 글을 보면 시술에 대해서 잘 이해해서 쓴 글이라는 생각이 들어서 너무 만족하고 있습니다. 매일매일 업로드 하는 포스팅을 보내주셔서 따로 확인하지 않아도 되고 관리 너무 잘해주시는것 같아요~ ^^',
+      desc: '꼼꼼하게 관리해 주세요. 병원에서 하는 시술에 대해서 이해도 하지 못한 채 짜깁기하듯 글 쓰는 업체들도 많은데, 써주신 글을 보면 시술에 대해서 잘 이해해서 쓴 글이라는 생각이 들어서 너무 만족하고 있습니다. 매일매일 업로드하는 포스팅을 보내주셔서 따로 확인하지 않아도 되고 관리 너무 잘해주시는 것 같아요~ ^^',
       color: 'indigo'
     },
     {
@@ -37,7 +37,7 @@ const Portfolio: React.FC = () => {
       category: '청담동 연예인 단골 **** 피부과',
       tag: '리스크 제로',
       title: '진심이 느껴지는 든든한 파트너',
-      desc: '개원 초반에 마케팅 사기를 당해서 안 좋은 기억이 있었는데, 리마업과의 계약을 망설였던 시간들이 후회될 뿐입니다. 정말 병원이 잘됐으면 하는 마음을 담아서 일해주시는게 너무나 느껴집니다. 언제 연락해도 친절히 응대해주시는 모습에 믿음이 더욱 쌓여갑니다! 앞으로도 좋은 동반자 관계를 계속 유지하고 싶습니다.',
+      desc: '개원 초반에 마케팅 사기를 당해서 안 좋은 기억이 있었는데, 리마업과의 계약을 망설였던 시간들이 후회될 뿐입니다. 정말 병원이 잘됐으면 하는 마음을 담아서 일해주시는 게 너무나 느껴집니다. 언제 연락해도 친절히 응대해 주시는 모습에 믿음이 더욱 쌓여갑니다! 앞으로도 좋은 동반자 관계를 계속 유지하고 싶습니다.',
       color: 'sky'
     },
     {
@@ -53,7 +53,7 @@ const Portfolio: React.FC = () => {
       category: '송파구 교통사고 입원율 1위 ****** 한의원',
       tag: '특화 진료',
       title: '대기실이 꽉 차는 확실한 효과',
-      desc: '처음엔 반신반의하면서 시작했는데, 매달 꼼꼼하게 피드백 주시고 카톡으로 바로바로 소통해주셔서 지금은 전적으로 믿고 맡깁니다. 요즘 대기실이 꽉 차서 데스크 직원들이 바쁘다고 투정부릴 정도네요 ㅎㅎ 항상 신경써주셔서 감사합니다.',
+      desc: '처음엔 반신반의하면서 시작했는데, 매달 꼼꼼하게 피드백 주시고 카톡으로 바로바로 소통해 주셔서 지금은 전적으로 믿고 맡깁니다. 요즘 대기실이 꽉 차서 데스크 직원들이 바쁘다고 투정 부릴 정도네요 ㅎㅎ 항상 신경 써주셔서 감사합니다.',
       color: 'sky'
     },
     {
@@ -61,7 +61,7 @@ const Portfolio: React.FC = () => {
       category: '판교 예약 대기 1개월 * 정신건강의학과',
       tag: '신뢰 구축',
       title: '원장의 진료 철학을 담은 글',
-      desc: '진료 과목 특성상 글의 뉘앙스가 정말 중요한데, 제 진료 철학을 글에 그대로 녹여내주셔서 놀랐습니다. 환자분들도 블로그 글에서 진정성이 느껴져서 용기 내서 찾아왔다고 많이들 말씀하시네요. 단순 광고가 아니라 진짜 소통하는 느낌이라 너무 좋습니다.',
+      desc: '진료 과목 특성상 글의 뉘앙스가 정말 중요한데, 제 진료 철학을 글에 그대로 녹여내 주셔서 놀랐습니다. 환자분들도 블로그 글에서 진정성이 느껴져서 용기 내서 찾아왔다고 많이들 말씀하시네요. 단순 광고가 아니라 진짜 소통하는 느낌이라 너무 좋습니다.',
       color: 'indigo'
     }
   ];
@@ -164,14 +164,14 @@ const Portfolio: React.FC = () => {
           <RevealOnScroll>
             <span className="text-gradient font-bold tracking-wider text-sm uppercase mb-2 block">Success Stories</span>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-slate-900">
-              리마업<span className="md:hidden"><br/></span><span className="hidden md:inline">, </span><span className="text-gradient">결과로 증명합니다</span>
+              리마업<span className="md:hidden"><br/></span><span className="hidden md:inline">, </span><span className="text-gradient">결과로 증명합니다.</span>
             </h2>
             <p className="text-slate-500 text-lg mb-4">
                 단순 노출은 의미 없습니다.<br className="md:hidden" /> 병원의 실질적인 매출 성장을 만듭니다.
             </p>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-medium">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-              조작없는 실제 구매자가 작성한 100% 클린리뷰입니다.
+              조작 없는 실제 구매자가 작성한 100% 클린 리뷰입니다.
             </div>
           </RevealOnScroll>
           <RevealOnScroll delay={0.2}>

@@ -23,10 +23,10 @@ const About: React.FC = () => {
             <div className="glass-card p-8 rounded-3xl border border-slate-200 bg-white shadow-lg">
               <div className="mb-8">
                 <p className="text-lg md:text-xl text-slate-600 leading-relaxed mb-2 font-medium">
-                  단순한 정보 나열은 의미가 없습니다
+                  단순한 정보 나열은 의미가 없습니다.
                 </p>
                 <p className="text-2xl md:text-3xl font-bold leading-tight text-slate-900">
-                  환자의 <span className="text-gradient drop-shadow-sm">결핍을 건드리는 기획</span>이 필요합니다
+                  환자의 <span className="text-gradient drop-shadow-sm">결핍을 건드리는 기획</span>이 필요합니다.
                 </p>
               </div>
 
@@ -74,10 +74,10 @@ const About: React.FC = () => {
                     {/* Header */}
                     <div className="mb-8 relative z-10">
                         <h3 className="text-2xl md:text-3xl font-bold text-gradient mb-2 tracking-tight">
-                            기획이 바뀌면 전환율이 달라집니다
+                            기획이 바뀌면 전환율이 달라집니다.
                         </h3>
                         <p className="text-slate-500 text-sm md:text-base font-medium">
-                            A성형외과, 기획 변경 후 신규 환자 259% 증가
+                            A 성형외과, 기획 변경 후 신규 환자 259% 증가
                         </p>
                     </div>
 

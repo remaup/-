@@ -23,7 +23,7 @@ const Comparison: React.FC = () => {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-slate-500">
                   <i className="fa-solid fa-xmark mt-1 text-red-500"></i>
-                  <span>상위노출만 되고 실제 내원(매출)으로는 이어지지 않는 공장식 원고</span>
+                  <span>상위 노출만 되고 실제 내원(매출)으로는 이어지지 않는 공장식 원고</span>
                 </li>
                 <li className="flex items-start gap-3 text-slate-500">
                   <i className="fa-solid fa-xmark mt-1 text-red-500"></i>

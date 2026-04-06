@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-40 text-center">
         
         {/* Scarcity Notice */}
-        <RevealOnScroll>
+        <RevealOnScroll delay={0.1}>
           <div className="inline-flex items-center justify-center w-full mb-4">
             <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-2 rounded-lg text-sm font-semibold shadow-sm flex items-center gap-2">
               <i className="fa-solid fa-bell animate-bounce"></i>
@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
         {/* Main Heading */}
         <RevealOnScroll delay={0.2}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white drop-shadow-sm">
-            병원블로그 <br className="md:hidden" />
+            병원 블로그 <br className="md:hidden" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-blue-400">리마업이 관리해야 1위가 됩니다</span>
           </h1>
         </RevealOnScroll>
@@ -86,14 +86,14 @@ const Hero: React.FC = () => {
         <RevealOnScroll delay={0.3}>
           <div className="mb-10 inline-block text-left drop-shadow-md">
             <p className="text-xl md:text-2xl text-white font-bold leading-normal">
-              진료만으로도 벅찬 하루 복잡한 마케팅<br className="md:hidden" />
-              고민은 리마업이 끝내드립니다
+              진료만으로도 벅찬 하루, 복잡한 마케팅<br className="md:hidden" />
+              고민은 리마업이 끝내드립니다.
             </p>
             <p className="text-lg md:text-xl text-slate-400 font-medium leading-normal mt-2">
-              원장님의 시간은 환자에게 병원블로그는<br className="md:hidden" />
-              확실한 전문가들에게<br />
-              진료 이외 모든 고민 리마업으로<br className="md:hidden" />
-              완벽히 해결해드릴 수 있습니다
+              원장님의 시간은 환자에게, 병원 블로그는<br className="md:hidden" />
+              확실한 전문가에게.<br />
+              진료 이외의 모든 고민, 리마업이<br className="md:hidden" />
+              완벽히 해결해 드립니다.
             </p>
           </div>
         </RevealOnScroll>
@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
 
         {/* CTA Buttons */}
         <RevealOnScroll delay={0.5}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
             <button 
               onClick={scrollToContact}
               className="group relative w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 via-sky-500 to-blue-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 text-white font-bold shadow-lg hover:shadow-blue-500/25 transform hover:-translate-y-1"
@@ -143,9 +143,9 @@ const Hero: React.FC = () => {
                 <i className="fa-solid fa-map-location-dot text-xl text-blue-400"></i>
               </div>
               <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-300 mb-2">1:1</h3>
-              <p className="text-lg font-bold text-white mb-4">지역별 진료과목 독점</p>
+              <p className="text-lg font-bold text-white mb-4">지역별 진료 과목 독점</p>
               <p className="text-sm text-slate-400 leading-relaxed">
-                원장님의 병원 성장에만 온전히 집중하기 위해, 동일 지역 내 같은 진료과목 병원은 추가로 계약하지 않습니다.
+                원장님의 병원 성장에만 온전히 집중하기 위해, 동일 지역 내 같은 진료 과목 병원은 추가로 계약하지 않습니다.
               </p>
             </div>
           </RevealOnScroll>

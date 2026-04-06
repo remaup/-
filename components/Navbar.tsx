@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const NAV_ITEMS = [
-  { id: 'home', label: '홈' },
-  { id: 'about', label: '소개' },
-  { id: 'service', label: '서비스' },
-  { id: 'portfolio', label: '성공사례' },
-  { id: 'pricing', label: '가격안내' },
-  { id: 'faq', label: 'Q&A' }
+  { id: 'home', label: '홈', path: '/' },
+  { id: 'about', label: '소개', path: '/' },
+  { id: 'service', label: '서비스', path: '/' },
+  { id: 'portfolio', label: '성공사례', path: '/' },
+  { id: 'pricing', label: '가격안내', path: '/' },
+  { id: 'faq', label: 'Q&A', path: '/' }
 ];
 
 const Navbar: React.FC = () => {
@@ -26,25 +26,42 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavigation = (id: string) => {
+  const handleNavigation = (item: typeof NAV_ITEMS[0]) => {
     setIsMobileMenuOpen(false);
     
+    if (item.path !== '/') {
+      navigate(item.path);
+      return;
+    }
+
     if (location.pathname !== '/') {
       navigate('/');
       // Wait for navigation to complete before scrolling
       setTimeout(() => {
-        const element = document.getElementById(id);
+        const element = document.getElementById(item.id);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }, 100);
     } else {
-      const element = document.getElementById(id);
+      const element = document.getElementById(item.id);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
-      } else if (id === 'home') {
+      } else if (item.id === 'home') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
+    }
+  };
+
+  const handleContactNavigation = () => {
+    setIsMobileMenuOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -55,7 +72,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div 
             className="flex-shrink-0 flex items-center cursor-pointer"
-            onClick={() => handleNavigation('home')}
+            onClick={() => handleNavigation(NAV_ITEMS[0])}
           >
             {!logoError ? (
               <img 
@@ -78,7 +95,7 @@ const Navbar: React.FC = () => {
               {NAV_ITEMS.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => handleNavigation(item.id)}
+                  onClick={() => handleNavigation(item)}
                   className={`px-4 py-2 rounded-full transition-colors text-sm font-medium capitalize ${isScrolled || location.pathname !== '/' ? 'text-slate-600 hover:text-blue-600 hover:bg-slate-50' : 'text-slate-200 hover:text-white hover:bg-white/10'}`}
                 >
                   {item.label}
@@ -90,7 +107,7 @@ const Navbar: React.FC = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <button 
-              onClick={() => handleNavigation('contact')}
+              onClick={handleContactNavigation}
               className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               무료 진단 신청
@@ -117,14 +134,14 @@ const Navbar: React.FC = () => {
              {NAV_ITEMS.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => handleNavigation(item.id)}
+                  onClick={() => handleNavigation(item)}
                   className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 capitalize"
                 >
                   {item.label}
                 </button>
               ))}
               <button 
-                onClick={() => handleNavigation('contact')}
+                onClick={handleContactNavigation}
                 className="block w-full text-center mt-4 bg-gradient-to-r from-blue-600 to-sky-500 text-white px-3 py-3 rounded-lg text-base font-bold"
               >
                 무료 진단 신청

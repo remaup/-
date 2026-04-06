@@ -63,7 +63,7 @@ const Process: React.FC = () => {
         <RevealOnScroll delay={0.4}>
           <div className="bg-blue-50 rounded-2xl p-8 border border-blue-100 text-center max-w-3xl mx-auto">
             <h3 className="text-xl font-bold text-slate-900 mb-4">
-              모든 과정은 <span className="text-blue-600">투명하게 공유</span>됩니다
+              모든 과정은 <span className="text-blue-600">투명하게 공유</span>됩니다.
             </h3>
             <ul className="text-slate-600 text-sm space-y-2 mb-6 inline-block text-left">
               <li className="flex items-center gap-2"><i className="fa-solid fa-check text-blue-500"></i> 소통 채널: 카카오톡 단체방 및 유선 전화 (상시 대기)</li>

@@ -8,8 +8,8 @@ const Services: React.FC = () => {
         <div className="text-center mb-16">
           <RevealOnScroll>
             <span className="text-gradient font-bold tracking-wider text-sm uppercase">Why 리마업?</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900">리마업, 3가지는 <span className="text-gradient">약속합니다</span></h2>
-            <p className="text-slate-500">고객이 가장 원하는 가치에만 집중하겠습니다</p>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900">리마업, 3가지는 <span className="text-gradient">약속합니다.</span></h2>
+            <p className="text-slate-500">고객이 가장 원하는 가치에만 집중하겠습니다.</p>
           </RevealOnScroll>
         </div>
 
@@ -33,9 +33,9 @@ const Services: React.FC = () => {
               <div className="w-10 h-0.5 bg-blue-200 mb-4 rounded-full"></div>
               
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                <strong className="text-slate-900">의료광고법 준수율 100% 이것이 목표입니다</strong><br />
-                보건소 소명 걱정은 덜어내세요<br />
-                안전한 원고 작성이 최우선 원칙입니다
+                <strong className="text-slate-900">의료광고법 준수율 100%, 이것이 목표입니다.</strong><br />
+                보건소 소명 걱정은 덜어내세요.<br />
+                안전한 원고 작성이 최우선 원칙입니다.
               </p>
               
               <div className="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
@@ -74,9 +74,9 @@ const Services: React.FC = () => {
               <div className="w-10 h-0.5 bg-sky-200 mb-4 rounded-full"></div>
 
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                <strong className="text-slate-900">문제가 생기면 즉각 조치합니다</strong><br />
-                관리자가 즉시 확인 후 바로 대응합니다<br />
-                빠른 소통을 원칙으로 하고 있습니다
+                <strong className="text-slate-900">문제가 생기면 즉각 조치합니다.</strong><br />
+                관리자가 즉시 확인 후 바로 대응합니다.<br />
+                빠른 소통을 원칙으로 하고 있습니다.
               </p>
 
               <div className="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
@@ -84,7 +84,7 @@ const Services: React.FC = () => {
                   <div className="w-5 h-5 rounded-full bg-sky-50 flex items-center justify-center mr-3 border border-sky-100">
                     <i className="fa-regular fa-clock text-[10px] text-sky-500"></i>
                   </div>
-                  0시간 내 피드백
+                  즉각 피드백
                 </div>
                 <div className="flex items-center text-sm text-slate-500">
                   <div className="w-5 h-5 rounded-full bg-sky-50 flex items-center justify-center mr-3 border border-sky-100">
@@ -115,9 +115,9 @@ const Services: React.FC = () => {
               <div className="w-10 h-0.5 bg-indigo-200 mb-4 rounded-full"></div>
 
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                <strong className="text-slate-900">병원 블로그만 연구했습니다</strong><br />
-                일반 마케팅과는 접근부터 다릅니다<br />
-                전문적인 분석으로 성과를 만듭니다
+                <strong className="text-slate-900">병원 블로그만 연구했습니다.</strong><br />
+                일반 마케팅과는 접근부터 다릅니다.<br />
+                전문적인 분석으로 성과를 만듭니다.
               </p>
 
               <div className="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
@@ -131,7 +131,7 @@ const Services: React.FC = () => {
                   <div className="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center mr-3 border border-indigo-100">
                     <i className="fa-solid fa-bullseye text-[10px] text-indigo-500"></i>
                   </div>
-                  타겟 맞춤 전략
+                  타깃 맞춤 전략
                 </div>
               </div>
             </div>
