@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import logoImg from '../public/logo.png';
 
 const NAV_ITEMS = [
   { id: 'home', label: '홈', path: '/' },
@@ -76,7 +77,7 @@ const Navbar: React.FC = () => {
           >
             {!logoError ? (
               <img 
-                src="/logo.png" 
+                src={logoImg} 
                 alt="리마업" 
                 className="h-12 md:h-16 w-auto object-contain" 
                 onError={() => setLogoError(true)}
