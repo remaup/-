@@ -24,12 +24,12 @@ const FloatingButtons: React.FC = () => {
         rel="noopener noreferrer"
         className="relative flex items-center justify-center gap-2 w-[130px] md:w-[145px] py-3 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 transition-all duration-300 group"
         style={{ backgroundColor: '#FEE500', color: '#3A1D1D' }}
-        aria-label="카카오톡 본사 문의"
+        aria-label="카카오톡 문의"
       >
         <svg viewBox="0 0 32 32" className="w-6 h-6 md:w-7 md:h-7" fill="currentColor">
           <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-1.44 5.44c-.16.48.32.88.72.64l6.4-4.24c.4.08.8.08 1.2.08 6.96 0 12.64-4.48 12.64-10.08S22.96 4.64 16 4.64z" />
         </svg>
-        <span className="font-bold text-sm md:text-base">본사 문의</span>
+        <span className="font-bold text-sm md:text-base">카톡문의</span>
         
         {/* Notification dot to draw attention */}
         <span className="absolute -top-1 -right-1 flex h-4 w-4">

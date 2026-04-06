@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`fixed w-full z-50 top-0 transition-all duration-300 ${isScrolled || location.pathname !== '/' ? 'bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24 md:h-28">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <div 
             className="flex-shrink-0 flex items-center cursor-pointer"
@@ -76,9 +76,9 @@ const Navbar: React.FC = () => {
           >
             {!logoError ? (
               <img 
-                src="https://photos.fife.usercontent.google.com/pw/AP1GczPJ6sbLA9twGOcwOTEeLx_Oe2lljfUWq0_Bcm0pFBTySm9euL4P1ao=w1305-h1305-s-no-gm?authuser=0" 
+                src="/로고.png" 
                 alt="리마업" 
-                className="h-12 w-auto object-contain" 
+                className="h-12 md:h-16 w-auto object-contain" 
                 onError={() => setLogoError(true)}
               />
             ) : (
