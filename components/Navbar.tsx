@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
           >
             {!logoError ? (
               <img 
-                src="/로고.png" 
+                src="/logo.png" 
                 alt="리마업" 
                 className="h-12 md:h-16 w-auto object-contain" 
                 onError={() => setLogoError(true)}
